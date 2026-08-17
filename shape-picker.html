@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Shape Settings</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 12px;
+
+      font-family: Arial, sans-serif;
+
+      background: #242424;
+      color: white;
+    }
+
+    .title {
+      margin-bottom: 7px;
+
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    .shapes {
+      display: grid;
+      gap: 6px;
+    }
+
+    button {
+      width: 100%;
+      height: 34px;
+
+      border: 1px solid #555;
+      border-radius: 6px;
+
+      background: #333;
+      color: white;
+
+      cursor: pointer;
+
+      text-align: left;
+      padding: 0 12px;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    button.selected {
+      border-color: white;
+      background: #555;
+    }
+
+    .section {
+      margin-top: 14px;
+    }
+
+    input[type="color"] {
+      width: 100%;
+      height: 40px;
+
+      border: 1px solid #555;
+      border-radius: 6px;
+
+      background: #333;
+      cursor: pointer;
+    }
+
+    .setting {
+      display: grid;
+      grid-template-columns: 1fr 65px;
+      gap: 8px;
+
+      align-items: center;
+
+      margin-top: 8px;
+    }
+
+    .setting label {
+      font-size: 13px;
+    }
+
+    .setting input[type="number"] {
+      width: 100%;
+
+      padding: 6px;
+
+      border: 1px solid #555;
+      border-radius: 5px;
+
+      background: #333;
+      color: white;
+    }
+
+    .checkbox-setting {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .checkbox-setting input {
+      width: 16px;
+      height: 16px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="title">
+    Shape
+  </div>
+
+  <div class="shapes">
+
+    <button
+      type="button"
+      data-shape="CIRCLE"
+    >
+      ○ Circle
+    </button>
+
+    <button
+      type="button"
+      data-shape="RECTANGLE"
+    >
+      □ Rectangle
+    </button>
+
+    <button
+      type="button"
+      data-shape="TRIANGLE"
+    >
+      △ Triangle
+    </button>
+
+    <button
+      type="button"
+      data-shape="HEXAGON"
+    >
+      ⬡ Hexagon
+    </button>
+
+  </div>
+
+
+  <div class="section">
+
+    <div class="title">
+      Line color
+    </div>
+
+    <input
+      type="color"
+      id="color"
+      value="#ff3b30"
+    />
+
+  </div>
+
+
+  <div class="section">
+
+      <div class="title">
+        Line settings
+      </div>
+
+      <div class="section">
+
+    <label class="checkbox-setting">
+
+      <input
+        id="linkSizeToAsset"
+        type="checkbox"
+        checked
+      />
+
+      <span>
+        Link size to image
+      </span>
+
+    </label>
+
+  </div>
+    <div class="setting">
+      
+      <label for="shapeScale">
+    Size multiplier
+      </label>
+
+      <input
+        id="shapeScale"
+        type="number"
+        min="0.1"
+        max="5"
+        step="0.1"
+        value="1"
+      />
+
+        <label for="fixedShapeSize">
+          Fixed size
+        </label>
+
+        <input
+          id="fixedShapeSize"
+          type="number"
+          min="10"
+          max="2000"
+          step="10"
+          value="200"
+        />
+
+
+      <label for="strokeWidth">
+        Thickness
+      </label>
+
+      <input
+        id="strokeWidth"
+        type="number"
+        min="1"
+        max="50"
+        step="1"
+        value="6"
+      />
+
+    </div>
+
+
+    <div class="setting">
+
+      <label for="dashLength">
+        Dash length
+      </label>
+
+      <input
+        id="dashLength"
+        type="number"
+        min="1"
+        max="200"
+        step="1"
+        value="24"
+      />
+
+    </div>
+
+
+    <div class="setting">
+
+      <label for="dashGap">
+        Gap
+      </label>
+
+      <input
+        id="dashGap"
+        type="number"
+        min="0"
+        max="200"
+        step="1"
+        value="12"
+      />
+
+    </div>
+
+  </div>
+
+
+  <script
+    type="module"
+    src="/src/shape-picker.js"
+  ></script>
+
+</body>
+
+</html>

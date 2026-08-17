@@ -1,0 +1,9 @@
+{
+  "name": "Asset Shape Tool",
+  "version": "0.0.2",
+  "manifest_version": 1,
+  "description": "Накладывает выбранную геометрическую фигуру на ассет",
+  "author": "Knight",
+  "icon": "/icon.svg",
+  "background_url": "/index.html"
+}
