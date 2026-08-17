@@ -8,7 +8,8 @@ import OBR, {
 // ID расширения
 // --------------------------------------------------
 
-const ID = "com.david.asset-shape";
+const ID = "com.Knight.asset-shape";
+const BASE_URL = import.meta.env.BASE_URL;
 
 const TOOL_ID = `${ID}/tool`;
 const MODE_ID = `${ID}/mode`;
@@ -600,7 +601,7 @@ async function createMode() {
 
     icons: [
       {
-        icon: "/icon.svg",
+        icon: `${BASE_URL}icon.svg`,
         label: "Apply Shape",
 
         filter: {
@@ -829,7 +830,7 @@ async function createAction() {
 
         id: POPOVER_ID,
 
-        url: "/shape-picker.html",
+        url: `${BASE_URL}shape-picker.html`,
 
         width: 220,
         height: 480,
@@ -857,7 +858,7 @@ async function createEraseSelectedAction() {
 
     icons: [
       {
-        icon: "/erase.svg",
+        icon: `${BASE_URL}erase.svg`,
         label: "Erase Selected",
 
         filter: {
@@ -881,7 +882,7 @@ async function createClearAllAction() {
 
     icons: [
       {
-        icon: "/trash.svg",
+        icon: `${BASE_URL}trash.svg`,
         label: "Clear All",
 
         filter: {

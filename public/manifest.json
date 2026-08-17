@@ -2,8 +2,8 @@
   "name": "Asset Shape Tool",
   "version": "0.0.2",
   "manifest_version": 1,
-  "description": "Накладывает выбранную геометрическую фигуру на ассет",
+  "description": "Asset Shape Tool for Owlbear Rodeo",
   "author": "Knight",
-  "icon": "/icon.svg",
-  "background_url": "/index.html"
+  "icon": "/ATA_aim-to-asset/icon.svg",
+  "background_url": "/ATA_aim-to-asset/index.html"
 }
