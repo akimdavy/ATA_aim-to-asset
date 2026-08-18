@@ -772,7 +772,7 @@ async function createTool() {
 
     icons: [
       {
-        icon: "/icon.svg",
+        icon: `${BASE_URL}icon.svg`,
         label: "Asset Shape"
       }
     ],
@@ -810,7 +810,7 @@ async function createAction() {
 
     icons: [
       {
-        icon: "/icon.svg",
+        icon: `${BASE_URL}icon.svg`,
         label: "Choose Shape",
 
         filter: {
