@@ -1,7 +1,7 @@
 import OBR from "@owlbear-rodeo/sdk";
 
 
-const ID = "com.david.asset-shape";
+const ID = "com.Knight.asset-shape";
 
 const TOOL_ID = `${ID}/tool`;
 
@@ -35,8 +35,11 @@ function updateSelected(shapeType) {
   }
 }
 
-function updateSizeControls() {
-
+function updateSizeControls(
+  linkSizeInput,
+  shapeScaleInput,
+  fixedShapeSizeInput
+) {
   const linked =
     linkSizeInput.checked;
 
@@ -165,6 +168,11 @@ OBR.onReady(async () => {
       metadata.dashGap,
       12
     );
+  updateSizeControls(
+  linkSizeInput,
+  shapeScaleInput,
+  fixedShapeSizeInput
+);
 
 
   // ------------------------------------------------
@@ -260,7 +268,11 @@ OBR.onReady(async () => {
         }
         );
 
-        updateSizeControls();
+        updateSizeControls(
+        linkSizeInput,
+        shapeScaleInput,
+        fixedShapeSizeInput
+      );
     }
     );
 
