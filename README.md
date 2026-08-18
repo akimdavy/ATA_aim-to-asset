@@ -45,3 +45,4 @@ Examples:
 1d6 + 3        → damage
 2d8 + 5        → damage
 3d6 + 1d4      → damage
+25             → damage
