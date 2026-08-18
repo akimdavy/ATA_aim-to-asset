@@ -4,6 +4,8 @@ targest asset for attchment shapes
 
 ATA (Aim to Asset) is an extension for [Owlbear Rodeo](https://www.owlbear.rodeo/) that allows you to attach customizable shapes to image assets and use them as visual markers or damage targets.
 
+link https://akimdavy.github.io/ATA_aim-to-asset/manifest.json
+
 ## Features
 
 - Attach shapes directly to image assets
